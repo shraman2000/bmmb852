@@ -91,6 +91,7 @@ the Makefile — everything else is generic.
 ```
 
 **How large is the genome? How many chromosomes does it have?**
+
 The genome is about **100 Mb** (~100,286,401 bp). *C. elegans* has **six
 chromosomes** — five autosomes (I–V) and one sex chromosome (X). Note the FASTA
 contains **seven** sequences, because it also includes the small mitochondrial
@@ -98,9 +99,11 @@ genome (MtDNA); that is an organellar genome, not a nuclear chromosome, so the
 chromosome count is six.
 
 **How many annotations are in the annotation file?**
+
 The GFF3 file contains 547,615 annotation lines across 21 feature types. The most abundant are exon (239,332), CDS (204,604), and gene (44,795). The gene count (44,795) is much higher than the ~20,000 protein-coding genes because RefSeq annotates many non-coding gene types too — notably 15,363 piRNAs, plus ncRNAs, tRNAs, and pseudogenes.
 
 **How complete is this genomic build, in your opinion?**
+
 In my opinion this is a highly complete, mature genome build. WBcel235 is a chromosome-level reference where each of the six chromosomes is a single continuous sequence with no scaffolding gaps, and it also includes the full mitochondrial genome. The annotation depth - over half a million features covering protein-coding genes, non-coding RNAs, and pseudogenes reflects that maturity rather than a rough first draft. As I am currently involved in aging biology research, I find this especially valuable as so much of what we know about the genetics of lifespan (insulin/IGF-1 signaling, daf-2/daf-16) rests on this worm, and reliable longevity research depends on exactly this kind of trustworthy, richly annotated reference.
 
 ---
