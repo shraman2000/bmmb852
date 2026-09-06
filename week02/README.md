@@ -110,37 +110,98 @@ In my opinion this is a highly complete, mature genome build. WBcel235 is a chro
 
 ## Part 2 — Visualize the genome in IGV
 
-Load `refs/genome.fa` as the genome (Genomes → Load Genome from File) and
-`refs/genome.gff` as a track (File → Load from File) in IGV.
+The FASTA (`refs/genome.fa`) was loaded as the genome and the GFF
+(`refs/genome.gff`) as an annotation track in IGV.
 
-> The items below must be answered from your **own** IGV session, with
-> screenshots. Guidance on how to read each answer is given, but the observations
-> and images have to be yours.
+![Whole-genome overview: all six chromosomes plus the mitochondrion](img/overview.png)
 
-**How tightly packed are the genes? Estimate the gene-to-gene distance.**
-*C. elegans* is gene-dense for a eukaryote (introns are short and intergenic
-regions modest). Zoom to a region a few kb wide, read the start of one gene and
-the end of the previous one off the coordinate ruler, and estimate the average
-intergenic gap. *(Insert your estimate + screenshot.)*
+**How tightly packed are the genes in this genome? Estimate the gene-to-gene distance via the browser.**
 
-**Pick a coordinate and inspect the sequence around it.**
-Zoom in until IGV shows individual bases, note the coordinate you picked, and
-capture the surrounding sequence. *(Insert coordinate + screenshot.)*
+Genes are tightly packed. If we divide the genome size (~100.3 Mb) by the number of gene features (44,795), it gives an average of one gene roughly every ~2.2 kb. IGV also agrees visually: a 50 kb window on chromosome I holds ~20 genes with only small intergenic gaps, and genes appear on both strands. This compact spacing is characteristic of the *C. elegans* genome.
 
-**Describe all six reading frames at that coordinate.**
-Any position sits in six possible frames: three on the forward strand (starting at
-the base, +1, and +2) and three on the reverse-complement strand. Turn on IGV's
-3-frame translation (right-click the sequence track) to see the forward frames,
-then view the reverse strand for the other three. *(List the codon/frame for each
-of the six and include a screenshot.)*
+![Gene density in a 50 kb window on chromosome I](img/gene-density.png)
+
+**Pick a coordinate on the chromosome and visually inspect the sequence regions around it.**
+
+I inspected chromosome I (NC_003279.8) around coordinate 1,020,030. At this zoom, IGV displays the individual bases (A/C/G/T) and their translation.
+
+![Sequence around coordinate 1,020,030](img/coordinate.png)
+
+**Describe all six reading frames (codons) that the coordinate could be part of.**
+
+A single genomic position can be read in six reading frames: three on the forward strand (offsets +1, +2, +3) and three on the reverse-complement strand (−1, −2, −3). In IGV, each frame produces a different string of amino acids; start codons (ATG → M) are shown in green and stop codons in red. The forward frames are shown first, then the reverse strand (done by flipping the sequence-track strand arrow).
+
+![Forward three-frame translation](img/reading-frames-forward.png)
+
+![Reverse-strand three-frame translation](img/reading-frames-reverse.png)
 
 **Identify the type of feature displayed as a data track.**
-Describe what the loaded GFF track shows (e.g., gene / mRNA / CDS features).
-*(State the feature type + screenshot.)*
 
-**Color features by strand orientation.**
-Right-click the annotation track → **Color by strand**, so + and − strand features
-are shown in different colors. *(Insert screenshot.)*
+The genome.gff track displays gene annotation features organized hierarchically — a gene, its mRNA transcript, and the constituent exon and CDS features, along with a chromosome-level region feature. Clicking the gene *mrpl-38* shows:
 
-*(Add screenshots below — drag images into the `week02` folder, e.g. `img/`, and
-reference them like `![gene density](img/density.png)`.)*
+```
+type: gene
+ID: gene-CELE_Y34D9A.1
+Dbxref: GeneID:171682,WormBase:WBGene00021327
+Name: mrpl-38
+gbkey: Gene
+gene: mrpl-38
+gene_biotype: protein_coding
+locus_tag: CELE_Y34D9A.1
+
+type: mRNA
+ID: rna-NM_058407.7
+Parent: gene-CELE_Y34D9A.1
+Dbxref: GeneID:171682,GenBank:NM_058407.7,WormBase:WBGene00021327
+Name: NM_058407.7
+gbkey: mRNA
+gene: mrpl-38
+locus_tag: CELE_Y34D9A.1
+product: Large ribosomal subunit protein mL38
+standard_name: Y34D9A.1.1
+transcript_id: NM_058407.7
+
+type: exon
+ID: exon-NM_058407.7-5
+Parent: rna-NM_058407.7
+Dbxref: GeneID:171682,GenBank:NM_058407.7,WormBase:WBGene00021327
+gbkey: mRNA
+gene: mrpl-38
+locus_tag: CELE_Y34D9A.1
+product: Large ribosomal subunit protein mL38
+standard_name: Y34D9A.1.1
+transcript_id: NM_058407.7
+
+type: CDS
+ID: cds-NP_490808.1
+Parent: rna-NM_058407.7
+Dbxref: GeneID:171682,GenBank:NP_490808.1,WormBase:WBGene00021327
+Name: NP_490808.1
+Note: Confirmed by transcript evidence
+gbkey: CDS
+gene: mrpl-38
+locus_tag: CELE_Y34D9A.1
+product: Large ribosomal subunit protein mL38
+protein_id: NP_490808.1
+standard_name: Y34D9A.1
+
+type: region
+ID: NC_003279.8:1..15072434
+Dbxref: taxon:6239
+Name: I
+chromosome: I
+gbkey: Src
+genome: chromosome
+mol_type: genomic DNA
+strain: Bristol N2
+```
+
+![mrpl-38 feature details in IGV](img/feature-popup.png)
+
+**Color features by their strand orientation.**
+
+I used the track's strand options ("Change Track Color (Negative Values or Strand)" and "Group by strand"). Features are separated and colored by direction of mRNA transcription. Plus-strand and minus-strand genes are shown distinctly.
+
+![Features colored by strand](img/strand-color.png)
+
+
