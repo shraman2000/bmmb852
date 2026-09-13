@@ -1,7 +1,9 @@
-# Week 03:Code Review and Pull Request
+# Week 03: Code Review and Pull Request
 
 **Author:** Shraman Jana
-**Repository reviewed:** [Kny-Le/BMMB852_KL:Week02](https://github.com/Kny-Le/BMMB852_KL/tree/main/Week02)
+
+**Repository reviewed:** [Kny-Le/BMMB852_KL — Week02](https://github.com/Kny-Le/BMMB852_KL/tree/main/Week02)
+
 **Genome in that assignment:** *Helicobacter pylori* (assembly GCF_902846105.1)
 
 For this assignment I reviewed Kenny's Week 2 submission: I forked it,
@@ -170,4 +172,4 @@ the "singluar" typo):
 
 I committed this to my fork and opened a pull request to the original repository.
 
-**Pull request:** [https://github.com/Kny-Le/BMMB852_KL/pull/2]
+**Pull request:** https://github.com/Kny-Le/BMMB852_KL/pull/2
