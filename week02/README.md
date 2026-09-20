@@ -129,6 +129,17 @@ I inspected chromosome I (NC_003279.8) around coordinate 1,020,030. At this zoom
 
 **Describe all six reading frames (codons) that the coordinate could be part of.**
 
+At coordinate 1,020,030, the reference base is G. Using the surrounding sequence `ATTTTGGTTCC`, the six possible codons containing this coordinate are:
+
+| Reading frame | Codon | Amino acid |
+| --- | --- | --- |
+| Forward +1 | `TTG` | Leucine (L) |
+| Forward +2 | `TGG` | Tryptophan (W) |
+| Forward +3 | `GGT` | Glycine (G) |
+| Reverse -1 | `CAA` | Glutamine (Q) |
+| Reverse -2 | `CCA` | Proline (P) |
+| Reverse -3 | `ACC` | Threonine (T) |
+
 A single genomic position can be read in six reading frames: three on the forward strand (offsets +1, +2, +3) and three on the reverse-complement strand (−1, −2, −3). In IGV, each frame produces a different string of amino acids; start codons (ATG → M) are shown in green and stop codons in red. The forward frames are shown first, then the reverse strand (done by flipping the sequence-track strand arrow).
 
 ![Forward three-frame translation](img/reading-frames-forward.png)
