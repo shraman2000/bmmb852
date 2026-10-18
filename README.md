@@ -10,4 +10,5 @@ Coursework repository for Applied Bioinformatics (2026).
 - [Week 04: Download and QC FASTQ data from the SRA](week04/README.md)
 - [Week 05: Align reads and generate a BAM file](week05/README.md)
 - [Week 06: Evaluate structural variants in IGV](week06/README.md)
-- [Week 07: Call variants and generate a VCF file](week07/README.md) 
+- [Week 07: Call variants and generate a VCF file](week07/README.md)
+- [Week 08: Multi-sample VCF and variant effect prediction](week08/README.md) 
