@@ -87,17 +87,7 @@ For the screenshot variant (Y69E1A.2), the relevant part of snpEff's `ANN` field
 IV  10950293  A  C  QUAL=191.9  missense_variant | Y69E1A.2 | p.Lys123Thr
 ```
 
-*(Paste the full `make coding` line or the complete ANN field from
-`vcf/annotated.vcf` if your reviewer wants the raw output.)*
-
 ### IGV screenshot (variant over translated CDS)
-
-*Load `refs/genome.fa` as the genome, then `bam/celegans_s1.bam` and the
-multi-sample VCF `vcf/merged.vcf.gz` (use merged.vcf.gz, not annotated.vcf - it
-keeps the RefSeq chromosome names `NC_003279.8` that match the genome in IGV). Go
-to `NC_003279.8:1839177` (= egl-30, I:1,839,177), right-click the sequence track to
-enable the amino-acid translation, and capture the VCF marker, the read pileup
-showing the ALT base, and the codon / amino-acid row all lined up.*
 
 ![Variant over translated CDS in IGV](img/igv_effect.png)
 
