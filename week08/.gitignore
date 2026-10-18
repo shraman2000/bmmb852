@@ -1,0 +1,8 @@
+refs/
+reads/
+bam/
+vcf/
+SRR*/
+*.sra
+snpEff_genes.txt
+snpEff_summary.html
