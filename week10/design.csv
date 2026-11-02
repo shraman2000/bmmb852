@@ -1,0 +1,5 @@
+sample,group,run,control
+dpy27_rep1,chip,SRR015070,input_rep1
+dpy27_rep2,chip,SRR015072,input_rep2
+input_rep1,input,SRR015071,
+input_rep2,input,SRR015073,

@@ -13,3 +13,4 @@ Coursework repository for Applied Bioinformatics (2026).
 - [Week 07: Call variants and generate a VCF file](week07/README.md)
 - [Week 08: Multi-sample VCF and variant effect prediction](week08/README.md)
 - [Week 09: Design-file-driven multi-sample variant workflow](week09/README.md) 
+- [Week 10: Call peaks from ChIP-seq data](week10/README.md)

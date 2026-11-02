@@ -1,0 +1,6 @@
+refs/
+reads/
+bam/
+peaks/
+SRR*/
+*.sra
