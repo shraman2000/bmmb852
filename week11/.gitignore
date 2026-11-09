@@ -1,0 +1,8 @@
+fasta/
+fastq/
+gtf/
+bam/
+bw/
+counts/
+*.tar.gz
+counts_matrix.tsv
